@@ -1,0 +1,516 @@
+.movie-modal-backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-modal-container {
+  background: #0a0a0a;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 43, 58, 0.9);
+  transform: rotate(90deg);
+}
+
+.modal-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.modal-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-banner-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, #0a0a0a 0%, transparent 100%);
+}
+
+.modal-content {
+  padding: 32px;
+  max-height: calc(90vh - 400px);
+  overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.modal-header {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.modal-poster-container {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.modal-poster {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.modal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-title {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.modal-original-title {
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.modal-metadata {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.metadata-item {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.metadata-item.age-rating {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.metadata-item.rating {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.metadata-divider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+}
+
+.modal-genres {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.genre-chip {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modal-watch-btn {
+  background: #2ecc71;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 6px;
+  text-transform: none;
+  min-width: 140px;
+  transition: all 0.3s ease;
+}
+
+.modal-watch-btn:hover {
+  background: #27ae60;
+  transform: scale(1.02);
+}
+
+.modal-add-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-transform: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.modal-add-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-share-btn {
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-transform: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.modal-share-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 24px 0;
+}
+
+.modal-tabs {
+  margin-bottom: 24px;
+}
+
+.custom-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.custom-tabs .MuiTab-root {
+  color: #b3b3b3;
+  font-weight: 500;
+  text-transform: none;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+  min-width: 100px;
+}
+
+.custom-tabs .MuiTab-root.Mui-selected {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.custom-tabs .MuiTabs-indicator {
+  background: #2ecc71;
+  height: 3px;
+}
+
+.tab-panel {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content {
+  padding: 16px 0;
+}
+
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+}
+
+.overview-description {
+  color: #b3b3b3;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  color: #b3b3b3;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.info-value {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.cast-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cast-avatar {
+  width: 60px;
+  height: 60px;
+  background: #1f1f1f;
+  font-weight: 600;
+}
+
+.cast-name {
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.episodes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.episode-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #141414;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.episode-item:hover {
+  background: #1f1f1f;
+  border-color: rgba(46, 204, 113, 0.3);
+}
+
+.episode-thumbnail {
+  width: 120px;
+  height: 68px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.episode-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.episode-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.episode-duration {
+  color: #b3b3b3;
+  font-size: 0.85rem;
+}
+
+.episode-watch-btn {
+  background: #2ecc71;
+  color: #ffffff;
+  font-weight: 600;
+  align-self: center;
+}
+
+.episode-watch-btn:hover {
+  background: #27ae60;
+}
+
+.trailer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.trailer-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #b3b3b3;
+}
+
+.trailer-play-icon {
+  font-size: 64px;
+  color: #ff2b3a;
+}
+
+.comments-section,
+.related-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-comments,
+.no-related {
+  color: #b3b3b3;
+  font-size: 1rem;
+  padding: 32px;
+  text-align: center;
+  background: #141414;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .movie-modal-container {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .modal-poster-container {
+    width: 180px;
+  }
+  
+  .modal-genres {
+    justify-content: center;
+  }
+  
+  .modal-actions {
+    justify-content: center;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-modal-container {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .modal-banner {
+    height: 250px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    max-height: calc(100vh - 250px);
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal-poster-container {
+    width: 140px;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .modal-watch-btn,
+  .modal-add-btn,
+  .modal-share-btn {
+    width: 100%;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .episode-item {
+    flex-direction: column;
+  }
+  
+  .episode-thumbnail {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .episode-watch-btn {
+    width: 100%;
+  }
+}

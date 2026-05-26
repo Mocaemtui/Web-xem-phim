@@ -1,0 +1,13 @@
+.skeleton-hero {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.skeleton-row {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.skeleton-card {
+  flex: 0 0 200px;
+}

@@ -1,0 +1,127 @@
+.source-status-panel {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  z-index: 1000;
+  background: #0E1C12;
+  border: 1px solid rgba(22, 163, 74, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.source-status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  background: rgba(22, 163, 74, 0.1);
+  transition: background 0.2s ease;
+}
+
+.source-status-header:hover {
+  background: rgba(22, 163, 74, 0.2);
+}
+
+.source-status-title {
+  color: #F8FAFC;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.expand-icon {
+  color: #A7B3AA;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.source-status-content {
+  padding: 12px 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.active-provider-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.active-provider-label {
+  color: #A7B3AA;
+  font-size: 0.75rem;
+}
+
+.no-provider-warning {
+  padding: 8px;
+  margin-bottom: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 4px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.provider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.provider-item {
+  padding: 8px;
+  background: rgba(5, 10, 6, 0.5);
+  border-radius: 4px;
+  border: 1px solid rgba(22, 163, 74, 0.1);
+}
+
+.provider-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.provider-name {
+  color: #F8FAFC;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.provider-error {
+  color: #EF4444;
+  font-size: 0.7rem;
+  display: block;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.provider-last-checked {
+  color: #6B7280;
+  font-size: 0.7rem;
+  display: block;
+  margin-top: 2px;
+}
+
+.last-health-check {
+  color: #6B7280;
+  font-size: 0.7rem;
+  display: block;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+@media (max-width: 768px) {
+  .source-status-panel {
+    bottom: 70px;
+    right: 10px;
+    width: 250px;
+  }
+}

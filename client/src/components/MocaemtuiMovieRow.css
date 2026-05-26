@@ -1,0 +1,204 @@
+.mocaemtui-movie-row {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 4%;
+}
+
+.row-title {
+  color: #F8FAFC;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1.5px solid rgba(22, 163, 74, 0.3);
+  color: #F8FAFC;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+}
+
+.view-all-btn:hover {
+  background: rgba(22, 163, 74, 0.1);
+  border-color: #16A34A;
+  color: #22C55E;
+}
+
+.view-all-icon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover .view-all-icon {
+  transform: translateX(4px);
+}
+
+.row-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(14, 28, 18, 0.9);
+  color: #F8FAFC;
+  border: 1px solid rgba(22, 163, 74, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.scroll-button:hover {
+  background: rgba(22, 163, 74, 0.9);
+  border-color: #22C55E;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-left {
+  left: -24px;
+}
+
+.scroll-right {
+  right: -24px;
+}
+
+.row-scroll-container {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 4%;
+}
+
+.row-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.row-cards {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.row-card-wrapper {
+  flex: 0 0 200px;
+  transition: transform 0.3s ease;
+}
+
+.row-error {
+  padding: 20px 4%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.error-text {
+  color: #A7B3AA;
+  font-size: 0.9rem;
+}
+
+.retry-icon {
+  color: #16A34A;
+}
+
+.retry-icon:hover {
+  color: #22C55E;
+}
+
+@media (max-width: 1024px) {
+  .row-card-wrapper {
+    flex: 0 0 180px;
+  }
+  
+  .scroll-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .scroll-left {
+    left: -20px;
+  }
+  
+  .scroll-right {
+    right: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row-header {
+    padding: 0 20px;
+  }
+  
+  .row-title {
+    font-size: 1.3rem;
+  }
+  
+  .view-all-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .row-scroll-container {
+    padding: 0 20px;
+  }
+  
+  .row-card-wrapper {
+    flex: 0 0 150px;
+  }
+  
+  .scroll-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .scroll-left {
+    left: -18px;
+  }
+  
+  .scroll-right {
+    right: -18px;
+  }
+  
+  .row-cards {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row-card-wrapper {
+    flex: 0 0 130px;
+  }
+  
+  .row-title {
+    font-size: 1.1rem;
+  }
+  
+  .view-all-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}

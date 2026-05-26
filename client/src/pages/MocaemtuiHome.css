@@ -1,0 +1,25 @@
+.mocaemtui-home {
+  min-height: 100vh;
+  background: #050505;
+  width: 100%;
+}
+
+.home-content {
+  padding-top: 68px;
+}
+
+.movie-rows-container {
+  padding: 40px 4%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding-top: 56px;
+  }
+  
+  .movie-rows-container {
+    padding: 32px 20px;
+  }
+}

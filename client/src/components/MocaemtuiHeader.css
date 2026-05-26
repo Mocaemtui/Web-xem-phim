@@ -1,0 +1,184 @@
+.mocaemtui-header {
+  background: transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  border-bottom: none;
+}
+
+.mocaemtui-header.scrolled {
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mocaemtui-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+  height: 68px;
+  min-height: 68px;
+}
+
+.mocaemtui-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  color: #2ecc71;
+  font-size: 2.5rem;
+  margin-right: 8px;
+}
+
+.logo-text {
+  color: #2ecc71;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.mocaemtui-logo:hover .logo-text {
+  color: #ffffff;
+}
+
+.desktop-navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-button {
+  color: #b3b3b3;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+}
+
+.nav-button:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 0 16px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.header-search:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #2ecc71;
+}
+
+.search-icon {
+  color: #b3b3b3;
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.search-input {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: 'Inter', 'Manrope', 'Space Grotesk', sans-serif;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-button {
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #2ecc71;
+}
+
+.signin-button {
+  background: #2ecc71;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-transform: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.signin-button:hover {
+  background: #27ae60;
+  transform: scale(1.02);
+}
+
+.mobile-menu-button {
+  display: none;
+  color: #ffffff;
+}
+
+.mobile-menu .MuiPaper-root {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.user-menu .MuiPaper-root {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .desktop-navigation {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: flex;
+  }
+  
+  .mocaemtui-toolbar {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.4rem;
+  }
+  
+  .action-button {
+    padding: 6px;
+  }
+  
+  .signin-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

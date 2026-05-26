@@ -1,0 +1,26 @@
+.mocaemtui-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-icon {
+  color: #16A34A;
+}
+
+.logo-text {
+  color: #F8FAFC;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.mocaemtui-logo:hover .logo-icon {
+  color: #22C55E;
+}
+
+.mocaemtui-logo:hover .logo-text {
+  color: #22C55E;
+}

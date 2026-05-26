@@ -1,0 +1,35 @@
+.bottom-navigation-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #050A06;
+  border-top: 1px solid rgba(22, 163, 74, 0.3);
+}
+
+.mocaemtui-bottom-navigation {
+  background: #050A06;
+  height: 60px;
+}
+
+.bottom-nav-action {
+  color: #A7B3AA;
+  min-width: 0;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+}
+
+.bottom-nav-action.Mui-selected {
+  color: #22C55E;
+}
+
+.bottom-nav-action:hover {
+  color: #16A34A;
+}
+
+@media (min-width: 961px) {
+  .bottom-navigation-container {
+    display: none;
+  }
+}

@@ -1,0 +1,83 @@
+:root {
+  font-family: 'Inter', 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  
+  /* Dark Green Cinematic Theme */
+  --bg-primary: #050A06;
+  --bg-surface: #0E1C12;
+  --bg-card: #0A140D;
+  
+  --primary-green: #16A34A;
+  --bright-green: #22C55E;
+  --dark-green: #15803D;
+  
+  --text-primary: #F8FAFC;
+  --text-secondary: #A7B3AA;
+  --text-muted: #6B7280;
+  
+  --border-color: rgba(22, 163, 74, 0.3);
+  --border-hover: rgba(22, 163, 74, 0.5);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--bright-green);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-green);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--bright-green);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--bright-green);
+  outline-offset: 2px;
+}
+
+#root {
+  min-height: 100vh;
+}
